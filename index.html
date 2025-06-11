@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Gráfico Kommo</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="margin: 0; padding: 0;">
+  <canvas id="grafico" width="400" height="200"></canvas>
+  <script>
+    const ctx = document.getElementById('grafico').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Fev', 'Mar', 'Abr'],
+        datasets: [{
+          label: 'Vendas',
+          data: [10, 15, 8, 12],
+          backgroundColor: 'rgba(54, 162, 235, 0.6)'
+        }]
+      },
+    });
+  </script>
+</body>
+</html>
